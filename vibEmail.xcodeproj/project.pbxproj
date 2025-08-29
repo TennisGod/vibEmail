@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DA9DE7462E31CA980032ED27 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = DA9DE7452E31CA980032ED27 /* GoogleSignIn */; };
+		DA9DE7482E31CAAF0032ED27 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DA9DE7472E31CAAF0032ED27 /* GoogleSignInSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DAF00E4A2E27347200861F5B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA9DE7212E3080350032ED27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAF00E3C2E27347100861F5B /* vibEmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vibEmail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF00E492E27347200861F5B /* vibEmailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vibEmailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF00E532E27347200861F5B /* vibEmailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vibEmailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9DE7462E31CA980032ED27 /* GoogleSignIn in Frameworks */,
+				DA9DE7482E31CAAF0032ED27 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA9DE7442E31CA980032ED27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DAF00E332E27347100861F5B = {
 			isa = PBXGroup;
 			children = (
+				DA9DE7212E3080350032ED27 /* Info.plist */,
 				DAF00E3E2E27347100861F5B /* vibEmail */,
 				DAF00E4C2E27347200861F5B /* vibEmailTests */,
 				DAF00E562E27347200861F5B /* vibEmailUITests */,
+				DA9DE7442E31CA980032ED27 /* Frameworks */,
 				DAF00E3D2E27347100861F5B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +129,8 @@
 			);
 			name = vibEmail;
 			packageProductDependencies = (
+				DA9DE7452E31CA980032ED27 /* GoogleSignIn */,
+				DA9DE7472E31CAAF0032ED27 /* GoogleSignInSwift */,
 			);
 			productName = vibEmail;
 			productReference = DAF00E3C2E27347100861F5B /* vibEmail.app */;
@@ -195,6 +214,9 @@
 			);
 			mainGroup = DAF00E332E27347100861F5B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DA9DE7432E31CA300032ED27 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DAF00E3D2E27347100861F5B /* Products */;
 			projectDirPath = "";
@@ -397,6 +419,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +447,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +574,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA9DE7432E31CA300032ED27 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA9DE7452E31CA980032ED27 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA9DE7432E31CA300032ED27 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		DA9DE7472E31CAAF0032ED27 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA9DE7432E31CA300032ED27 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAF00E342E27347100861F5B /* Project object */;
 }
